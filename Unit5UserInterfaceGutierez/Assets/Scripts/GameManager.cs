@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using System.Runtime.CompilerServices;
+
 
 public class GameManager : MonoBehaviour
 {
@@ -36,10 +36,11 @@ public class GameManager : MonoBehaviour
             int index = Random.Range(0, targets.Count);
             Instantiate(targets[index]);
 
-            UpdateScore(5);
+         
         }
+    }
 
-        void UpdateScore(int scoreToAdd)
+        public void UpdateScore(int scoreToAdd)
         {
             score += scoreToAdd;
             scoreText.text = "Score: " + score;
@@ -47,4 +48,4 @@ public class GameManager : MonoBehaviour
         
 
     }
-}
+
